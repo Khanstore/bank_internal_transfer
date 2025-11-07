@@ -9,8 +9,8 @@ class BankInternalTransferWizard(models.TransientModel):
     _name = 'bank.internal.transfer.wizard'
     _description = 'Bank Internal Transfer Wizard'
 
-    journal_id = fields.Many2one('account.journal', string='Source Bank', required=True, domain=[('type', '=', 'bank')])
-    destination_journal_id = fields.Many2one('account.journal', string='Destination Bank', required=True, domain=[('type', '=', 'bank')])
+    journal_id = fields.Many2one('account.journal', string='Source Bank', required=True, domain=[('type', 'in', ("bank","cash"))])
+    destination_journal_id = fields.Many2one('account.journal', string='Destination Bank', required=True, domain=[('type', 'in', ("bank","cash"))])
     transfer_account_id = fields.Many2one(
         'account.account',
         string='Liquidity Transfer Account',
