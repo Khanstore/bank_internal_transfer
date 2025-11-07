@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <menuitem id="menu_bank_internal_transfer"
+              name="Internal Transfer Wizard"
+              parent="account.menu_finance_entries"
+              action="action_bank_internal_transfer_wizard"
+              sequence="99"/>
+</odoo>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_bank_internal_transfer_wizard_form" model="ir.ui.view">
+        <field name="name">bank.internal.transfer.wizard.form</field>
+        <field name="model">bank.internal.transfer.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Internal Bank Transfer">
+                <group>
+                    <field name="journal_id_from"/>
+                    <field name="journal_id_to"/>
+                    <field name="amount"/>
+                    <field name="date"/>
+                </group>
+                <footer>
+                    <button name="action_confirm" string="Confirm" type="object" class="btn-primary"/>
+                    <button string="Cancel" special="cancel" class="btn-secondary"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_bank_internal_transfer_wizard" model="ir.actions.act_window">
+        <field name="name">Internal Transfer Wizard</field>
+        <field name="res_model">bank.internal.transfer.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem id="menu_bank_internal_transfer"
+              name="Internal Transfer Wizard"
+              parent="account.menu_finance_entries"
+              action="action_bank_internal_transfer_wizard"
+              sequence="99"/>
+</odoo>
