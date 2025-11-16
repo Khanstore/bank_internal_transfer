@@ -1,0 +1,2 @@
+id,activity_ids,city,country_id,email,name,phone,user_id,active
+bank_internal_transfer.default_transfer_partner,,,Bangladesh,,Internal Transfer,,,FALSE

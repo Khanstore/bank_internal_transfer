@@ -6,6 +6,7 @@
     'license': 'LGPL-3',
     'depends': ['account'],
     'data': [
+        'data/res.partner.csv',
         'security/ir.model.access.csv',
         'wizard/internal_transfer_wizard_view.xml',
         'views/menu.xml',

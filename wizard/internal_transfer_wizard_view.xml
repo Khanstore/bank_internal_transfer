@@ -7,14 +7,16 @@
             <form string="Internal Bank Transfer">
                 <group>
                     <group>
-                        <field name="journal_id"/>
+                        <field name="source_journal_id"/>
                         <field name="destination_journal_id"/>
                         <field name="amount"/>
+
+                        <field name="date"/>
                         <field name="note"/>
                     </group>
                     <group>
-
-                        <field name="transfer_account_id"/>
+                        <field name="source_partner_id"/>
+                        <field name="destination_partner_id"/>
                     </group>
                 </group>
                 <footer>
